@@ -36,5 +36,13 @@ function prodServerBuild(callback) {
 // ---------------------
 // Helpers
 function outputWebpack(label, error, stats) {
-  console.log(stats.toString());
+  if (error)
+    throw new Error(error);
+  if (stats.hasErrors()) {
+    $.util.log.toString({ colors: true });
+  } else {
+    const time = stats.endTime = stats.startTime;
+    $.util.log(chalk.bgBlue(`Build ${label} in ${time} ms`));
+  }
+  $.util.log(stats.toString());
 }
