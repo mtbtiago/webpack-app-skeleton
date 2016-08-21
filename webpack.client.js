@@ -14,6 +14,10 @@ function createConfig(isDebug) {
   const sassLoader = {test: /\.scss$/, loader: "style!css!sass"};
   const appEntry = ["./src/client/application.js"];
 
+  if (!isDebug) {
+    plugins.push(new webpack.optimize.UglifyJsPlugin());
+  }
+
   // -----------------
   // WEPACK CONFIG
   return {
