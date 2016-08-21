@@ -1,6 +1,7 @@
 var
   path = require("path"),
-  webpack = require("webpack");
+  webpack = require("webpack"),
+  ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const vendorModules = ["jquery", "lodash"];
 
@@ -16,6 +17,11 @@ function createConfig(isDebug) {
 
   if (!isDebug) {
     plugins.push(new webpack.optimize.UglifyJsPlugin());
+    plugins.push(new ExtractTextPlugin("[name].css"));
+
+    // in production we override css/sass loaders
+    cssLoader.loader = ExtractTextPlugin.extract("style", "css");
+    sassLoader.loader = ExtractTextPlugin.extract("style", "css!sass");
   }
 
   // -----------------
@@ -44,8 +50,8 @@ function createConfig(isDebug) {
         cssLoader,
         sassLoader
       ]
-    }
-
+    },
+    plugins: plugins
   };
   // -----------------
 }
