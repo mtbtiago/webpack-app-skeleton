@@ -1,0 +1,158 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/tiago/.nvm/versions/node/v6.3.1/bin/node',
+1 verbose cli   '/home/tiago/.nvm/versions/node/v6.3.1/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'gulpjs/gulp-cli#4.0' ]
+2 info using npm@3.10.5
+3 info using node@v6.3.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData gulpjs/gulp-cli#4.0
+8 silly fetchOtherPackageData gulpjs/gulp-cli#4.0
+9 silly cache add args [ 'gulpjs/gulp-cli#4.0', null ]
+10 verbose cache add spec gulpjs/gulp-cli#4.0
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'gulpjs/gulp-cli#4.0',
+11 silly cache add   scope: null,
+11 silly cache add   escapedName: null,
+11 silly cache add   name: null,
+11 silly cache add   rawSpec: 'gulpjs/gulp-cli#4.0',
+11 silly cache add   spec: 'github:gulpjs/gulp-cli#4.0',
+11 silly cache add   type: 'hosted',
+11 silly cache add   hosted:
+11 silly cache add    { type: 'github',
+11 silly cache add      ssh: 'git@github.com:gulpjs/gulp-cli.git#4.0',
+11 silly cache add      sshUrl: 'git+ssh://git@github.com/gulpjs/gulp-cli.git#4.0',
+11 silly cache add      httpsUrl: 'git+https://github.com/gulpjs/gulp-cli.git#4.0',
+11 silly cache add      gitUrl: 'git://github.com/gulpjs/gulp-cli.git#4.0',
+11 silly cache add      shortcut: 'github:gulpjs/gulp-cli#4.0',
+11 silly cache add      directUrl: 'https://raw.githubusercontent.com/gulpjs/gulp-cli/4.0/package.json' } }
+12 verbose addRemoteGit caching gulpjs/gulp-cli#4.0
+13 verbose addRemoteGit gulpjs/gulp-cli#4.0 is a repository hosted by github
+14 silly tryGitProto attempting to clone git://github.com/gulpjs/gulp-cli.git#4.0
+15 silly tryClone cloning gulpjs/gulp-cli#4.0 via git://github.com/gulpjs/gulp-cli.git#4.0
+16 verbose tryClone git-github-com-gulpjs-gulp-cli-git-4-0-177dc8bb not in flight; caching
+17 verbose correctMkdir /home/tiago/.npm/_git-remotes correctMkdir not in flight; initializing
+18 info git [ 'config', '--get', 'remote.origin.url' ]
+19 silly validateExistingRemote gulpjs/gulp-cli#4.0 remote.origin.url: git://github.com/gulpjs/gulp-cli.git
+20 verbose validateExistingRemote gulpjs/gulp-cli#4.0 is updating existing cached remote /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-177dc8bb
+21 info git [ 'fetch', '-a', 'origin' ]
+22 verbose updateRemote git fetch -a origin (git://github.com/gulpjs/gulp-cli.git)
+23 verbose correctMkdir /home/tiago/.npm/_git-remotes correctMkdir not in flight; initializing
+24 verbose setPermissions gulpjs/gulp-cli#4.0 set permissions on /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-177dc8bb
+25 verbose resolveHead gulpjs/gulp-cli#4.0 original treeish: 4.0
+26 info git [ 'rev-list', '-n1', '4.0' ]
+27 error git rev-list -n1 4.0: fatal: ambiguous argument '4.0': unknown revision or path not in the working tree.
+27 error git rev-list -n1 4.0: Use '--' to separate paths from revisions, like this:
+27 error git rev-list -n1 4.0: 'git <command> [<revision>...] -- [<file>...]'
+28 silly tryHTTPS attempting to clone git+https://github.com/gulpjs/gulp-cli.git#4.0
+29 silly tryClone cloning gulpjs/gulp-cli#4.0 via git+https://github.com/gulpjs/gulp-cli.git#4.0
+30 verbose tryClone git-https-github-com-gulpjs-gulp-cli-git-4-0-4d1486f1 not in flight; caching
+31 verbose correctMkdir /home/tiago/.npm/_git-remotes correctMkdir not in flight; initializing
+32 info git [ 'config', '--get', 'remote.origin.url' ]
+33 silly validateExistingRemote gulpjs/gulp-cli#4.0 remote.origin.url: https://github.com/gulpjs/gulp-cli.git
+34 verbose validateExistingRemote gulpjs/gulp-cli#4.0 is updating existing cached remote /home/tiago/.npm/_git-remotes/git-https-github-com-gulpjs-gulp-cli-git-4-0-4d1486f1
+35 info git [ 'fetch', '-a', 'origin' ]
+36 verbose updateRemote git fetch -a origin (https://github.com/gulpjs/gulp-cli.git)
+37 verbose correctMkdir /home/tiago/.npm/_git-remotes correctMkdir not in flight; initializing
+38 verbose setPermissions gulpjs/gulp-cli#4.0 set permissions on /home/tiago/.npm/_git-remotes/git-https-github-com-gulpjs-gulp-cli-git-4-0-4d1486f1
+39 verbose resolveHead gulpjs/gulp-cli#4.0 original treeish: 4.0
+40 info git [ 'rev-list', '-n1', '4.0' ]
+41 error git rev-list -n1 4.0: fatal: ambiguous argument '4.0': unknown revision or path not in the working tree.
+41 error git rev-list -n1 4.0: Use '--' to separate paths from revisions, like this:
+41 error git rev-list -n1 4.0: 'git <command> [<revision>...] -- [<file>...]'
+42 silly trySSH attempting to clone git@github.com:gulpjs/gulp-cli.git#4.0
+43 silly tryClone cloning gulpjs/gulp-cli#4.0 via git@github.com:gulpjs/gulp-cli.git#4.0
+44 verbose tryClone git-github-com-gulpjs-gulp-cli-git-4-0-799725fb not in flight; caching
+45 verbose correctMkdir /home/tiago/.npm/_git-remotes correctMkdir not in flight; initializing
+46 info git [ 'clone',
+46 info git   '--template=/home/tiago/.npm/_git-remotes/_templates',
+46 info git   '--mirror',
+46 info git   'git@github.com:gulpjs/gulp-cli.git',
+46 info git   '/home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb' ]
+47 error git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb: Cloning into bare repository '/home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb'...
+47 error git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb: Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+47 error git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb: Permission denied (publickey).
+47 error git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb: fatal: Could not read from remote repository.
+47 error git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb:
+47 error git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb: Please make sure you have the correct access rights
+47 error git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb: and the repository exists.
+48 silly fetchPackageMetaData Error: Command failed: git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb
+48 silly fetchPackageMetaData Cloning into bare repository '/home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb'...
+48 silly fetchPackageMetaData Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+48 silly fetchPackageMetaData Permission denied (publickey).
+48 silly fetchPackageMetaData fatal: Could not read from remote repository.
+48 silly fetchPackageMetaData
+48 silly fetchPackageMetaData Please make sure you have the correct access rights
+48 silly fetchPackageMetaData and the repository exists.
+48 silly fetchPackageMetaData
+48 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:202:12)
+48 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+48 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
+48 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:852:16)
+48 silly fetchPackageMetaData     at Socket.<anonymous> (internal/child_process.js:323:11)
+48 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+48 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
+48 silly fetchPackageMetaData     at Pipe._handle.close [as _onclose] (net.js:492:12)
+48 silly fetchPackageMetaData  error for gulpjs/gulp-cli#4.0 { Error: Command failed: git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb
+48 silly fetchPackageMetaData Cloning into bare repository '/home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb'...
+48 silly fetchPackageMetaData Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+48 silly fetchPackageMetaData Permission denied (publickey).
+48 silly fetchPackageMetaData fatal: Could not read from remote repository.
+48 silly fetchPackageMetaData
+48 silly fetchPackageMetaData Please make sure you have the correct access rights
+48 silly fetchPackageMetaData and the repository exists.
+48 silly fetchPackageMetaData
+48 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:202:12)
+48 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+48 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
+48 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:852:16)
+48 silly fetchPackageMetaData     at Socket.<anonymous> (internal/child_process.js:323:11)
+48 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+48 silly fetchPackageMetaData     at Socket.emit (events.js:188:7)
+48 silly fetchPackageMetaData     at Pipe._handle.close [as _onclose] (net.js:492:12)
+48 silly fetchPackageMetaData   killed: false,
+48 silly fetchPackageMetaData   code: 128,
+48 silly fetchPackageMetaData   signal: null,
+48 silly fetchPackageMetaData   cmd: 'git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb' }
+49 silly rollbackFailedOptional Starting
+50 silly rollbackFailedOptional Finishing
+51 silly runTopLevelLifecycles Starting
+52 silly runTopLevelLifecycles Finishing
+53 silly install printInstalled
+54 verbose stack Error: Command failed: git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb
+54 verbose stack Cloning into bare repository '/home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb'...
+54 verbose stack Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+54 verbose stack Permission denied (publickey).
+54 verbose stack fatal: Could not read from remote repository.
+54 verbose stack
+54 verbose stack Please make sure you have the correct access rights
+54 verbose stack and the repository exists.
+54 verbose stack
+54 verbose stack     at ChildProcess.exithandler (child_process.js:202:12)
+54 verbose stack     at emitTwo (events.js:106:13)
+54 verbose stack     at ChildProcess.emit (events.js:191:7)
+54 verbose stack     at maybeClose (internal/child_process.js:852:16)
+54 verbose stack     at Socket.<anonymous> (internal/child_process.js:323:11)
+54 verbose stack     at emitOne (events.js:96:13)
+54 verbose stack     at Socket.emit (events.js:188:7)
+54 verbose stack     at Pipe._handle.close [as _onclose] (net.js:492:12)
+55 verbose cwd /home/tiago/dev/js/udemy/02-app
+56 error Linux 3.13.0-24-generic
+57 error argv "/home/tiago/.nvm/versions/node/v6.3.1/bin/node" "/home/tiago/.nvm/versions/node/v6.3.1/bin/npm" "install" "-g" "gulpjs/gulp-cli#4.0"
+58 error node v6.3.1
+59 error npm  v3.10.5
+60 error code 128
+61 error Command failed: git clone --template=/home/tiago/.npm/_git-remotes/_templates --mirror git@github.com:gulpjs/gulp-cli.git /home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb
+61 error Cloning into bare repository '/home/tiago/.npm/_git-remotes/git-github-com-gulpjs-gulp-cli-git-4-0-799725fb'...
+61 error Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+61 error Permission denied (publickey).
+61 error fatal: Could not read from remote repository.
+61 error
+61 error Please make sure you have the correct access rights
+61 error and the repository exists.
+62 error If you need help, you may report this error at:
+62 error     <https://github.com/npm/npm/issues>
+63 verbose exit [ 1, true ]
