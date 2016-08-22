@@ -1,11 +1,48 @@
 import "source-map-support/register";
 
-import {blgegh} from "shared/test";
+import express from "express";
+import http from "http";
+import socketIo from "socket.io";
 
-// import  _ from "lodash";
+var isDevelopment = process.env.NODE_ENV !== "production";
 
-blgegh();
-console.log("from server");
-// throw new Error("blgegh");
-// const arr = [1, 2, 3, 4];
-// console.log(_.filter(arr, a => a < 3));
+// ------------------------------
+// Setup
+const app = express();
+const server = new http.Server(app);
+const io = socketIo(server);
+
+// ------------------------------
+// Client Webpack
+
+// ------------------------------
+// Express
+app.set("view engine", "jade");
+app.use(express.static("public"));
+
+const useExternalStyles = !isDevelopment;
+app.get("/", (req, res) => {
+  res.render("index", {
+    useExternalStyles
+  });
+});
+
+// ------------------------------
+// Modules
+
+// ------------------------------
+// Socket
+io.on("connection", (socket) => {
+  console.log(`Got connection from ${socket.request.connection.remoteAddress}`);
+});
+
+// ------------------------------
+// Startup
+const port = process.env.PORT || 3000;
+function startServer() {
+  server.listen(port, () => {
+    console.log(`Started http server on ${port}`);
+  });
+}
+
+startServer();
