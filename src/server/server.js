@@ -3,8 +3,9 @@ import "source-map-support/register";
 import express from "express";
 import http from "http";
 import socketIo from "socket.io";
+import chalk from "chalk";
 
-var isDevelopment = process.env.NODE_ENV !== "production";
+const isDevelopment = process.env.NODE_ENV !== "production";
 
 // ------------------------------
 // Setup
@@ -14,6 +15,27 @@ const io = socketIo(server);
 
 // ------------------------------
 // Client Webpack
+if (process.env.USE_WEBPACK === "true") {
+  // see gulpfile.bable.js function prodServerBuild for USE_WEBPACK env var
+  var webpackMiddleware = require("webpack-dev-middleware"),
+    webpack = require("webpack"),
+    clientConfig = require("../../webpack.client");
+
+  const compiler = webpack(clientConfig);
+  app.use(webpackMiddleware(compiler, {
+    publicPath: "/public/",
+    stats: {
+      colors: true,
+      chunks: false,
+      assets: false,
+      timings: false,
+      modules: false,
+      version: false
+    }
+  }));
+
+  console.log(chalk.bgRed("Using WebPack Dev Middleare! THIS IS FOR DEV ONLY!"));
+}
 
 // ------------------------------
 // Express
