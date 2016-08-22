@@ -22,6 +22,11 @@ function createConfig(isDebug) {
     // in production we override css/sass loaders
     cssLoader.loader = ExtractTextPlugin.extract("style", "css");
     sassLoader.loader = ExtractTextPlugin.extract("style", "css!sass");
+  } else {
+    plugins.push(new webpack.HotModuleReplacementPlugin());
+    // this injects this js file in our app (see that webpack-hot-middleware/client.js actually exist )
+    // see also that this js file is inserted before our application.js. All vendor code must come before
+    appEntry.splice(0, 0, "webpack-hot-middleware/client");
   }
 
   // -----------------

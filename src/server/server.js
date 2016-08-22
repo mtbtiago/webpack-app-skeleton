@@ -18,12 +18,13 @@ const io = socketIo(server);
 if (process.env.USE_WEBPACK === "true") {
   // see gulpfile.bable.js function prodServerBuild for USE_WEBPACK env var
   var webpackMiddleware = require("webpack-dev-middleware"),
+    webpackHotMiddleware = require("webpack-hot-middleware"),
     webpack = require("webpack"),
     clientConfig = require("../../webpack.client");
 
   const compiler = webpack(clientConfig);
   app.use(webpackMiddleware(compiler, {
-    publicPath: "/public/",
+    publicPath: "/build/",
     stats: {
       colors: true,
       chunks: false,
@@ -34,11 +35,13 @@ if (process.env.USE_WEBPACK === "true") {
     }
   }));
 
+  app.use(webpackHotMiddleware(compiler));
+
   console.log(chalk.bgRed("Using WebPack Dev Middleare! THIS IS FOR DEV ONLY!"));
 }
 
 // ------------------------------
-// Express
+// Configure Express
 app.set("view engine", "jade");
 app.use(express.static("public"));
 
